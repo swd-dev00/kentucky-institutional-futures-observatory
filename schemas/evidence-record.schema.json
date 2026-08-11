@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/swd-dev00/kentucky-institutional-futures-observatory/blob/main/schemas/evidence-record.schema.json",
+  "title": "KIFO Evidence Record",
+  "description": "Canonical provenance-preserving observation used by the Kentucky Institutional Futures Observatory.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "source",
+    "observation",
+    "scope",
+    "provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._:-]+$"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["publisher", "title", "url"],
+      "properties": {
+        "publisher": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "source_type": { "type": "string" },
+        "authority_class": {
+          "type": "string",
+          "enum": ["primary", "institutional", "research", "secondary", "signal"]
+        }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["topic"],
+      "properties": {
+        "topic": { "type": "string", "minLength": 1 },
+        "metric": { "type": "string" },
+        "value": {},
+        "unit": { "type": "string" },
+        "publication_date": { "type": "string", "format": "date" },
+        "period_start": { "type": "string", "format": "date" },
+        "period_end": { "type": "string", "format": "date" },
+        "text_signal": { "type": "string" }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "institution": { "type": "string" },
+        "institution_type": { "type": "string" },
+        "geography": { "type": "string" },
+        "geography_level": {
+          "type": "string",
+          "enum": ["state", "region", "county", "institution", "other"]
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["retrieved_at"],
+      "properties": {
+        "retrieved_at": { "type": "string", "format": "date-time" },
+        "source_identifier": { "type": "string" },
+        "snapshot_reference": { "type": "string" },
+        "transformation": { "type": "string" },
+        "evidence_quality": {
+          "type": "string",
+          "enum": ["A", "B", "C", "D"]
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
