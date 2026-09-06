@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kentucky Institutional Futures Observatory — field research across the Commonwealth." />
+    <title>Kentucky Institutional Futures Observatory</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-identity">
+        <a class="wordmark" href="#research" aria-label="KIFO home">
+          <span class="wordmark-title">Kentucky Institutional<br />Futures Observatory</span>
+          <span class="wordmark-subtitle">Field research across the Commonwealth</span>
+        </a>
+        <div class="register-meta" aria-label="Field register metadata">
+          <span>36.7783° N</span>
+          <span>84.2700° W</span>
+          <span>FIELD REGISTER — KIF-001</span>
+        </div>
+      </div>
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open primary navigation">
+        <span aria-hidden="true">☰</span>
+      </button>
+    </header>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#research">Research</a>
+      <a href="#lenses">Six lenses</a>
+      <a href="#instruments">Instruments</a>
+      <a href="#territory">Regions</a>
+      <a href="#methodology">Methodology</a>
+      <a class="nav-action" href="#submit-concern">Submit a concern <span aria-hidden="true">→</span></a>
+    </nav>
+
+    <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true" inert tabindex="-1">
+      <div class="drawer-heading">
+        <span>Navigation</span>
+        <button id="drawer-close" type="button" aria-label="Close primary navigation">×</button>
+      </div>
+      <nav aria-label="Mobile primary navigation">
+        <a class="mobile-link" href="#research">Research</a>
+        <a class="mobile-link" href="#lenses">Six lenses</a>
+        <a class="mobile-link" href="#instruments">Instruments</a>
+        <a class="mobile-link" href="#territory">Regions</a>
+        <a class="mobile-link" href="#methodology">Methodology</a>
+        <a class="mobile-link drawer-action" href="#submit-concern">Submit a concern →</a>
+      </nav>
+    </aside>
+
+    <main id="main-content">
+      <section id="research" class="hero" aria-labelledby="hero-title">
+        <canvas id="territory-canvas" aria-hidden="true"></canvas>
+        <div class="hero-copy">
+          <p class="eyebrow">Field observatory / active research territory</p>
+          <h1 id="hero-title">Tracking how Kentucky's institutions prepare for — and shape — the systems changing public life.</h1>
+          <p class="hero-lede">KIFO examines institutional readiness, technological adoption, infrastructure, workforce change, and the lived consequences of automated systems across the Commonwealth.</p>
+          <div class="hero-actions">
+            <a class="button button-rust" href="#instruments">Explore instrument register <span aria-hidden="true">→</span></a>
+            <a class="button button-blue" href="#lenses">View analytical lenses <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <aside class="hero-register" aria-label="Current research territory">
+          <p class="register-label">Territorial register</p>
+          <p class="register-answer">Kentucky as a field of institutional change.</p>
+          <dl>
+            <div><dt>Scope</dt><dd>Commonwealth-wide, place-based</dd></div>
+            <div><dt>Method</dt><dd>Observe → document → contextualize</dd></div>
+            <div><dt>Default</dt><dd>Unknown remains visible</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <div class="status-bar" aria-label="Current observatory status">
+        <span>Current research territory: Commonwealth of Kentucky</span>
+        <strong>System status: active monitoring</strong>
+      </div>
+
+      <section id="lenses" class="section" aria-labelledby="lenses-title">
+        <div class="section-intro">
+          <p class="eyebrow rust">Analytical framework</p>
+          <h2 id="lenses-title">The six lenses of institutional inquiry</h2>
+          <p>To evaluate institutional preparedness across municipal, state, and regional entities, the Observatory applies six discrete analytical perspectives.</p>
+        </div>
+        <div class="lens-grid" id="lens-grid"></div>
+      </section>
+
+      <section id="instruments" class="section section-paper" aria-labelledby="instruments-title">
+        <div class="section-heading-row">
+          <div>
+            <p class="eyebrow rust">Observatory instruments</p>
+            <h2 id="instruments-title">The tools the Observatory is building</h2>
+          </div>
+          <p class="section-note">Planned products are identified by maturity. No instrument below is presented as a published dataset.</p>
+        </div>
+        <div class="instrument-table-wrap">
+          <table>
+            <caption class="visually-hidden">KIFO instrument register and maturity states</caption>
+            <thead><tr><th>No.</th><th>Instrument</th><th>Purpose</th><th>Maturity</th></tr></thead>
+            <tbody id="instrument-rows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="territory" class="section territory-section" aria-labelledby="territory-title">
+        <div>
+          <p class="eyebrow blue">Regional context</p>
+          <h2 id="territory-title">Preserving regional context across the Commonwealth</h2>
+          <p>From Jefferson and Fayette counties to Eastern Kentucky coalfield communities and Western Kentucky agricultural cooperatives, institutional trajectories diverge sharply. KIFO maintains place-based profiles that prevent statewide variation from being flattened into abstract averages.</p>
+          <div class="territory-facts"><span>120 counties considered</span><span>6 regional hubs</span><span>Local public audits</span><span>Verified field notes</span></div>
+        </div>
+        <div class="territory-card">
+          <p class="register-label">Field observatory</p>
+          <h3>Place-based observation, institutional signals, and documented conditions.</h3>
+          <p>Regional relationships are treated as research context, not as inferred scores or surveillance infrastructure.</p>
+          <div class="field-status">STATUS: 2026 FIELD STUDY ACTIVE</div>
+        </div>
+      </section>
+
+      <section id="methodology" class="section methodology" aria-labelledby="methodology-title">
+        <div class="section-intro centered">
+          <p class="eyebrow rust">Standards & governance</p>
+          <h2 id="methodology-title">Evidence maturity & editorial independence</h2>
+          <p>KIFO distinguishes between preliminary field signals, research frameworks, and verified case studies. The absence of a record means unknown — never inactive, low-performing, or unimportant.</p>
+        </div>
+        <div class="maturity-grid"><article><h3>Research frameworks</h3><p>Methodological blueprints designed to preserve regional context.</p></article><article><h3>In development</h3><p>Active instruments undergoing collection and cross-reference validation.</p></article><article><h3>Forthcoming</h3><p>Planned syntheses of verified findings and unresolved questions.</p></article></div>
+      </section>
+
+      <section id="submit-concern" class="section section-paper concern-section" aria-labelledby="concern-title">
+        <div class="section-intro centered"><p class="eyebrow rust">Community register</p><h2 id="concern-title">Prepare a concern draft</h2><p>This workflow runs entirely in your browser. Nothing is transmitted or stored by this page.</p></div>
+        <form id="concern-form" class="concern-form">
+          <div class="honeypot" aria-hidden="true"><label for="website-hp">Website</label><input id="website-hp" name="website-hp" tabindex="-1" autocomplete="off" /></div>
+          <div class="form-grid"><label>Name (optional)<input id="concern-name" name="name" autocomplete="name" /></label><label>Email (optional)<input id="concern-email" name="email" type="email" autocomplete="email" /></label></div>
+          <div class="form-grid"><label>County or Kentucky region<input id="concern-county" name="county" placeholder="e.g. Pike County" required /></label><label>Institution or system (optional)<input id="concern-institution" name="institution" /></label></div>
+          <label>Concern category<select id="concern-category" name="category"><option>Public-service access</option><option>Governance and accountability</option><option>Procurement transparency</option><option>Data and infrastructure</option><option>Workforce impact</option><option>Other institutional concern</option></select></label>
+          <label>Description<textarea id="concern-description" name="description" rows="6" placeholder="Describe the concern in your own words." required></textarea></label>
+          <label class="consent"><input id="concern-consent" type="checkbox" required /> <span>I understand this form prepares a local draft and does not transmit my information.</span></label>
+          <p id="form-message" class="form-message" role="alert" tabindex="-1" hidden></p>
+          <button class="button button-rust form-submit" type="submit">Prepare concern draft <span aria-hidden="true">→</span></button>
+          <p class="form-note">Spam protection: a hidden honeypot and a minimum two-second completion time are active.</p>
+        </form>
+        <div id="draft-result" class="draft-result" role="region" aria-labelledby="draft-title" aria-live="polite" hidden><p class="eyebrow">Local draft ready — not submitted</p><h3 id="draft-title" tabindex="-1">Your concern summary is ready.</h3><p>Nothing has been sent or stored by the Observatory. Copy or download this summary for your records.</p><div class="result-actions"><button id="copy-draft" class="button button-dark" type="button">Copy summary</button><button id="download-draft" class="button button-blue" type="button">Download .txt</button></div><p id="copy-status" role="status" aria-live="polite" hidden></p></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div><strong>Kentucky Institutional Futures Observatory</strong><p>A research and editorial initiative examining institutional readiness and public life across the Commonwealth.</p></div><span>FIELD REGISTER: KIF-001</span></footer>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
